@@ -1,0 +1,46 @@
+/* Clinic Management System - Site CSS */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.card {
+    border-radius: 10px;
+    border: none;
+}
+
+.card-header {
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.table th {
+    font-weight: 600;
+}
+
+.btn {
+    border-radius: 6px;
+}
+
+.alert {
+    border-radius: 8px;
+}
+
+/* Dashboard cards hover effect */
+a.card:hover {
+    transform: translateY(-3px);
+    transition: transform 0.2s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+}

@@ -1,0 +1,91 @@
+@page
+@model ClinicManagement.Web.Pages.Patient.PatientHomeModel
+@{
+    ViewData["Title"] = "Patient Home";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2><i class="fas fa-home me-2"></i>Welcome, @Model.PatientInfo?.Name</h2>
+    <a href="/SignUp" class="btn btn-outline-danger btn-sm">
+        <i class="fas fa-sign-out-alt me-1"></i>Logout
+    </a>
+</div>
+
+<!-- Patient Info Card -->
+@if (Model.PatientInfo != null)
+{
+    <div class="card shadow mb-4">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0"><i class="fas fa-user me-2"></i>My Profile</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-3"><strong>Name:</strong> @Model.PatientInfo.Name</div>
+                <div class="col-md-3"><strong>Age:</strong> @Model.PatientInfo.Age</div>
+                <div class="col-md-3"><strong>Gender:</strong> @Model.PatientInfo.Gender</div>
+                <div class="col-md-3"><strong>Phone:</strong> @Model.PatientInfo.Phone</div>
+            </div>
+        </div>
+    </div>
+}
+
+<!-- Current Appointment -->
+@if (Model.CurrentAppointment != null)
+{
+    <div class="alert alert-info">
+        <i class="fas fa-calendar-check me-2"></i>
+        <strong>Today's Appointment:</strong> Dr. @Model.CurrentAppointment.DoctorName at @Model.CurrentAppointment.Timings
+    </div>
+}
+
+<!-- Quick Navigation -->
+<div class="row">
+    <div class="col-md-4 mb-3">
+        <a href="/Patient/TakeAppointment" class="card text-decoration-none shadow h-100">
+            <div class="card-body text-center bg-primary text-white rounded">
+                <i class="fas fa-calendar-plus fa-3x mb-2"></i>
+                <h5>Take Appointment</h5>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4 mb-3">
+        <a href="/Patient/CurrentAppointment" class="card text-decoration-none shadow h-100">
+            <div class="card-body text-center bg-success text-white rounded">
+                <i class="fas fa-calendar-day fa-3x mb-2"></i>
+                <h5>Current Appointment</h5>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4 mb-3">
+        <a href="/Patient/TreatmentHistory" class="card text-decoration-none shadow h-100">
+            <div class="card-body text-center bg-info text-white rounded">
+                <i class="fas fa-history fa-3x mb-2"></i>
+                <h5>Treatment History</h5>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4 mb-3">
+        <a href="/Patient/BillsHistory" class="card text-decoration-none shadow h-100">
+            <div class="card-body text-center bg-warning text-white rounded">
+                <i class="fas fa-file-invoice-dollar fa-3x mb-2"></i>
+                <h5>Bills History</h5>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4 mb-3">
+        <a href="/Patient/PatientNotifications" class="card text-decoration-none shadow h-100">
+            <div class="card-body text-center bg-secondary text-white rounded">
+                <i class="fas fa-bell fa-3x mb-2"></i>
+                <h5>Notifications</h5>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4 mb-3">
+        <a href="/Patient/PatientFeedback" class="card text-decoration-none shadow h-100">
+            <div class="card-body text-center bg-dark text-white rounded">
+                <i class="fas fa-star fa-3x mb-2"></i>
+                <h5>Feedback</h5>
+            </div>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+@page
+@model ClinicManagement.Web.Pages.Doctor.DoctorHomeModel
+@{
+    ViewData["Title"] = "Doctor Home";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2><i class="fas fa-user-md me-2"></i>Welcome, Dr. @Model.DoctorInfo?.Name</h2>
+    <a href="/SignUp" class="btn btn-outline-danger btn-sm">
+        <i class="fas fa-sign-out-alt me-1"></i>Logout
+    </a>
+</div>
+
+@if (Model.DoctorInfo != null)
+{
+    <div class="card shadow mb-4">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0"><i class="fas fa-id-card me-2"></i>My Profile</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-3"><strong>Department:</strong> @Model.DoctorInfo.Department</div>
+                <div class="col-md-3"><strong>Specialization:</strong> @Model.DoctorInfo.Specialization</div>
+                <div class="col-md-3"><strong>Patients Treated:</strong> @Model.DoctorInfo.PatientsTreated</div>
+                <div class="col-md-3"><strong>Repute Index:</strong> @Model.DoctorInfo.ReputeIndex.ToString("F1")</div>
+            </div>
+        </div>
+    </div>
+}
+
+<!-- Quick Navigation -->
+<div class="row">
+    <div class="col-md-4 mb-3">
+        <a href="/Doctor/PendingAppointment" class="card text-decoration-none shadow h-100">
+            <div class="card-body text-center bg-warning text-white rounded">
+                <i class="fas fa-clock fa-3x mb-2"></i>
+                <h5>Pending Appointments</h5>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4 mb-3">
+        <a href="/Doctor/PatientHistory" class="card text-decoration-none shadow h-100">
+            <div class="card-body text-center bg-info text-white rounded">
+                <i class="fas fa-history fa-3x mb-2"></i>
+                <h5>Patient History</h5>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4 mb-3">
+        <a href="/Doctor/Bill" class="card text-decoration-none shadow h-100">
+            <div class="card-body text-center bg-success text-white rounded">
+                <i class="fas fa-file-invoice-dollar fa-3x mb-2"></i>
+                <h5>Billing</h5>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4 mb-3">
+        <a href="/Doctor/HistoryUpdate" class="card text-decoration-none shadow h-100">
+            <div class="card-body text-center bg-primary text-white rounded">
+                <i class="fas fa-edit fa-3x mb-2"></i>
+                <h5>Update History</h5>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4 mb-3">
+        <a href="/Doctor/PreviousHistory" class="card text-decoration-none shadow h-100">
+            <div class="card-body text-center bg-secondary text-white rounded">
+                <i class="fas fa-archive fa-3x mb-2"></i>
+                <h5>Previous History</h5>
+            </div>
+        </a>
+    </div>
+</div>

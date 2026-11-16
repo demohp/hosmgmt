@@ -1,0 +1,66 @@
+@page
+@model ClinicManagement.Web.Pages.Patient.AppointmentTakerModel
+@{
+    ViewData["Title"] = "Take Appointment";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2><i class="fas fa-calendar-plus me-2"></i>Book Appointment</h2>
+    <a href="/Patient/ViewDoctors" class="btn btn-outline-secondary btn-sm">
+        <i class="fas fa-arrow-left me-1"></i>Back
+    </a>
+</div>
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="alert alert-danger">@Model.ErrorMessage</div>
+}
+
+@if (Model.DoctorProfile != null)
+{
+    <div class="card shadow mb-4">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Dr. @Model.DoctorProfile.Name - @Model.DoctorProfile.Department</h5>
+        </div>
+        <div class="card-body">
+            <p><strong>Charges per visit:</strong> @Model.DoctorProfile.ChargesPerVisit.ToString("C")</p>
+            <p><strong>Specialization:</strong> @Model.DoctorProfile.Specialization</p>
+        </div>
+    </div>
+}
+
+@if (Model.FreeSlots != null && Model.FreeSlots.Any())
+{
+    <div class="card shadow">
+        <div class="card-header bg-success text-white">
+            <h5 class="mb-0"><i class="fas fa-clock me-2"></i>Available Slots</h5>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                <input type="hidden" name="doctorId" value="@Request.Query["doctorId"]" />
+                <div class="row">
+                    @foreach (var slot in Model.FreeSlots)
+                    {
+                        <div class="col-md-4 mb-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="freeSlot" value="@slot.SlotId" id="slot_@slot.SlotId" required />
+                                <label class="form-check-label" for="slot_@slot.SlotId">
+                                    @slot.Timings
+                                </label>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <button type="submit" class="btn btn-success mt-3">
+                    <i class="fas fa-check me-1"></i>Confirm Appointment
+                </button>
+            </form>
+        </div>
+    </div>
+}
+else if (Model.DoctorProfile != null)
+{
+    <div class="alert alert-warning">
+        <i class="fas fa-exclamation-triangle me-2"></i>No available slots for this doctor at the moment.
+    </div>
+}
