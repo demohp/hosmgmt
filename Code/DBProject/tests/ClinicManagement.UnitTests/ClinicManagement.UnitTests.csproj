@@ -17,12 +17,14 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Moq" Version="4.20.72" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\ClinicManagement.Application\ClinicManagement.Application.csproj" />
     <ProjectReference Include="..\..\src\ClinicManagement.Domain\ClinicManagement.Domain.csproj" />
     <ProjectReference Include="..\..\src\ClinicManagement.Infrastructure\ClinicManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\ClinicManagement.Web\ClinicManagement.Web.csproj" />
   </ItemGroup>
 
 </Project>
