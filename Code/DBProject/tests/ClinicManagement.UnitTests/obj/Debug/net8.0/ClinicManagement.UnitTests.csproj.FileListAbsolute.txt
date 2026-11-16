@@ -426,3 +426,4 @@
 /modernize-data/studio-data/TNT1001/APP468296/transformed-code/109/studio-workspace/HSMGT/Code/DBProject/tests/ClinicManagement.UnitTests/bin/Debug/net8.0/ClinicManagement.Web.dll
 /modernize-data/studio-data/TNT1001/APP468296/transformed-code/109/studio-workspace/HSMGT/Code/DBProject/tests/ClinicManagement.UnitTests/bin/Debug/net8.0/ClinicManagement.Web.pdb
 /modernize-data/studio-data/TNT1001/APP468296/transformed-code/109/studio-workspace/HSMGT/Code/DBProject/tests/ClinicManagement.UnitTests/obj/Debug/net8.0/MvcTestingAppManifest.json
+/modernize-data/studio-data/TNT1001/APP468296/transformed-code/109/studio-workspace/HSMGT/Code/DBProject/tests/ClinicManagement.UnitTests/bin/Debug/net8.0/CoverletSourceRootsMapping_ClinicManagement.UnitTests

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "yxaJohhGyE0=",
+  "dgSpecHash": "RZN2Adey5q0=",
   "success": true,
   "projectFilePath": "/modernize-data/studio-data/TNT1001/APP468296/transformed-code/109/studio-workspace/HSMGT/Code/DBProject/tests/ClinicManagement.UnitTests/ClinicManagement.UnitTests.csproj",
   "expectedPackageFiles": [
     "/app/.nuget/packages/castle.core/5.1.1/castle.core.5.1.1.nupkg.sha512",
+    "/app/.nuget/packages/coverlet.msbuild/6.0.2/coverlet.msbuild.6.0.2.nupkg.sha512",
     "/app/.nuget/packages/fluentvalidation/11.9.0/fluentvalidation.11.9.0.nupkg.sha512",
     "/app/.nuget/packages/microsoft.aspnetcore.mvc.testing/8.0.0/microsoft.aspnetcore.mvc.testing.8.0.0.nupkg.sha512",
     "/app/.nuget/packages/microsoft.aspnetcore.testhost/8.0.0/microsoft.aspnetcore.testhost.8.0.0.nupkg.sha512",

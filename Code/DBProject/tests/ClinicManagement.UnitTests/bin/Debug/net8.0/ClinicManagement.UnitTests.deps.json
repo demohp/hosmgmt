@@ -43,6 +43,7 @@
           "Microsoft.AspNetCore.Mvc.Testing": "8.0.0",
           "Microsoft.NET.Test.Sdk": "17.12.0",
           "Moq": "4.20.72",
+          "coverlet.msbuild": "6.0.2",
           "xunit": "2.9.3",
           "xunit.runner.visualstudio": "2.8.2",
           "Microsoft.AspNetCore.Antiforgery": "8.0.0.0",
@@ -2734,6 +2735,9 @@
         },
         "compileOnly": true
       },
+      "coverlet.msbuild/6.0.2": {
+        "compileOnly": true
+      },
       "Microsoft.EntityFrameworkCore.Analyzers/8.0.0": {
         "compileOnly": true
       },
@@ -4694,6 +4698,13 @@
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
+    },
+    "coverlet.msbuild/6.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8b4jBNH7mcQy1otyQErjjIUuGD74XxKZ1wvDufbY7jhWwckl7wIa+icjwdPYeI0aYMS4Tp63LIZvyMFjWwOMDw==",
+      "path": "coverlet.msbuild/6.0.2",
+      "hashPath": "coverlet.msbuild.6.0.2.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Analyzers/8.0.0": {
       "type": "package",
